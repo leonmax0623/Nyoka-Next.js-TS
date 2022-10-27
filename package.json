@@ -1,0 +1,48 @@
+{
+  "name": "nyoka",
+  "private": true,
+  "engines": {
+    "node": ">=16.15",
+    "pnpm": ">=7.12"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint:code": "eslint src --ext .tsx --ext .ts",
+    "lint:code:fix": "eslint src --ext .tsx --ext .ts --fix",
+    "lint:style": "stylelint src --config ./stylelint.config.js",
+    "lint:style:fix": "stylelint src --config ./stylelint.config.js --fix",
+    "lint": "pnpm lint:code && pnpm lint:style",
+    "find-deadcode": "ts-prune"
+  },
+  "dependencies": {
+    "email-validator": "^2.0.4",
+    "nanoid": "^4.0.0",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "^0.31.1",
+    "styled-components": "^5.3.6",
+    "styled-normalize": "^8.0.7",
+    "swiper": "^8.4.4"
+  },
+  "devDependencies": {
+    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@types/node": "^18.11.2",
+    "@types/react": "18.0.21",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1",
+    "eslint-plugin-react": "^7.31.10",
+    "postcss-syntax": "^0.36.2",
+    "stylelint": "^14.14.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "ts-prune": "^0.10.3",
+    "typescript": "4.8.4"
+  }
+}
